@@ -89,3 +89,6 @@
 
 [push]
 	default = matching
+[user]
+	name = sypwex
+	email = sypwex@gmail.com

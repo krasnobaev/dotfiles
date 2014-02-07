@@ -1,0 +1,6 @@
+# Programs that will run after Openbox has started
+
+idesk&
+trayer --expand true --edge bottom --align right --widthtype request --transparent true --tint black --SetDockType true& 
+# trayer --SetDockType false 
+
