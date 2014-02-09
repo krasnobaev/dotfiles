@@ -21,5 +21,10 @@ lost+found
 bootstrap.sh
 README.md
 LICENSE-MIT.txt
+
+# permission denied
 .cache
+.config/ibus/bus
+.gnupg
+.gvfs
 
