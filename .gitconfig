@@ -92,3 +92,5 @@
 [user]
 	name = sypwex
 	email = sypwex@gmail.com
+[credential]
+	helper = cache

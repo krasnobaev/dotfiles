@@ -1,6 +1,9 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH"
 
+# http://lib.ru/unixhelp/fonty.txt
+setxkbmap -layout "us,ru(typewriter)" -option "grp:alt_shift_toggle,grp_led:scroll"
+
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.

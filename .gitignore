@@ -14,3 +14,12 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 lost+found
+
+# are you sure?
+.git
+.DS_Store
+bootstrap.sh
+README.md
+LICENSE-MIT.txt
+.cache
+

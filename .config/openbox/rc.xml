@@ -357,19 +357,15 @@
         <execute>chromium-browser --incognito</execute>
       </action>
 </keybind>
-<keybind key="XF86Favorites">
-      <action name="Execute">
-        <execute>chromium-browser --app=https://launchpad.37signals.com/backpack/signin</execute>
-      </action>
-</keybind>
-<keybind key="A-XF86Favorites">
+
+<keybind key="XF86Reload">
       <action name="Execute">
         <execute>chromium-browser --app=http://stackexchange.com/filters</execute>
       </action>
 </keybind>
-<keybind key="XF86Eject">
+<keybind key="A-Cancel">
       <action name="Execute">
-        <execute>gvim</execute>
+        <execute>chromium-browser --app=https://bitbucket.org/dashboard/overview</execute>
       </action>
 </keybind>
 <keybind key="Cancel">
@@ -377,9 +373,20 @@
         <execute>chromium-browser --app=http://github.com/</execute>
       </action>
 </keybind>
-<keybind key="A-Cancel">
+<keybind key="XF86Favorites">
       <action name="Execute">
-        <execute>chromium-browser --app=https://bitbucket.org/dashboard/overview</execute>
+        <execute>chromium-browser --app=https://launchpad.37signals.com/backpack/signin</execute>
+      </action>
+</keybind>
+<keybind key="A-XF86Favorites">
+      <action name="Execute">
+        <execute>dolphin "/home/sypwex/Desktop/2DO - порядок/"</execute>
+      </action>
+</keybind>
+
+<keybind key="XF86Eject">
+      <action name="Execute">
+        <execute>gvim</execute>
       </action>
 </keybind>
 
@@ -456,36 +463,6 @@
         <action name="Lower"/>
         <action name="FocusToBottom"/>
         <action name="Unfocus"/>
-      </mousebind>
-      <mousebind button="A-Up" action="Click">
-        <action name="GoToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind button="A-Down" action="Click">
-        <action name="GoToDesktop">
-          <to>next</to>
-        </action>
-      </mousebind>
-      <mousebind button="C-A-Up" action="Click">
-        <action name="GoToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind button="C-A-Down" action="Click">
-        <action name="GoToDesktop">
-          <to>next</to>
-        </action>
-      </mousebind>
-      <mousebind button="A-S-Up" action="Click">
-        <action name="SendToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind button="A-S-Down" action="Click">
-        <action name="SendToDesktop">
-          <to>next</to>
-        </action>
       </mousebind>
     </context>
     <context name="Titlebar">

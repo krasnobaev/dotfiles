@@ -1,6 +1,13 @@
 # Programs that will run after Openbox has started
 
-idesk&
+~/.bash_profile
+
 trayer --expand true --edge bottom --align right --widthtype request --transparent true --tint black --SetDockType true& 
 # trayer --SetDockType false 
+
+# sometimes after launching nautilus, the last one sets blank screen after timeout. i don't need it
+# solution from: http://ubuntuforums.org/showthread.php?t=1283057
+xset s off
+xset -dpms
+xset s noblank
 
