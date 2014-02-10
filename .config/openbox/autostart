@@ -11,3 +11,5 @@ xset s off
 xset -dpms
 xset s noblank
 
+setlayout 0 2 2 0
+
