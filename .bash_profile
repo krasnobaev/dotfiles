@@ -1,5 +1,6 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH"
+export USERMAIL="sypwex@gmail.com"
 
 # http://lib.ru/unixhelp/fonty.txt
 setxkbmap -layout "us,ru(typewriter)" -option "grp:alt_shift_toggle,grp_led:scroll"
