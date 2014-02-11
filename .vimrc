@@ -136,7 +136,25 @@ filetype plugin indent on " required!
 " https://github.com/Chiel92/vim-autoformat
 Bundle "Chiel92/vim-autoformat"
 
+filetype plugin on
+
 " set up syntax folding automatically for XML files
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
+
+" http://blog.ezyang.com/2010/03/vim-textwidth/
+augroup vimrc_autocmds
+  autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
+  autocmd BufEnter * match OverLength /\%74v.*/
+  set tw=0
+augroup END
+
+" http://www.vim.org/scripts/script.php?script_id=365
+" http://www.thegeekstuff.com/2009/02/make-vim-as-your-bash-ide-using-bash-support-plugin
+" bash-support
+let g:BASH_AuthorName   = $LOGNAME
+let g:BASH_Email        = $USERMAIL
+
+" http://stackoverflow.com/questions/657447/vim-clear-last-search-highlighting
+nnoremap <esc> :noh<return><esc>
 
