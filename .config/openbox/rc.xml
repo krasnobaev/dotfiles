@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- http://melp.nl/2011/01/10-must-have-key-and-mouse-binding-configs-in-openbox -->
-<!-- http://openbox.org/wiki/Help:Actions -->
+<!-- http://openbox.org/wiki/Help:Contents -->
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
 	<resistance>
 		<strength>20</strength>
@@ -331,6 +331,7 @@
 	  </keybind>
 	  <!--mememe.sypwex-->
 	  <keybind key="W-Right">
+		<action name="Unmaximize"/>
 		  <action name="MoveResizeTo">
 			  <x>-0</x>
 			  <width client="yes">1/2</width>
@@ -340,6 +341,7 @@
 		</action>
 	  </keybind>
 	  <keybind key="W-Left">
+		<action name="Unmaximize"/>
 		<action name="MoveResizeTo">
 			<x>0</x>
 			<width client="yes">1/2</width>
@@ -517,6 +519,11 @@
 			  <execute>gnome-terminal --command=xev</execute>
 		  </action>
 		  </keybind>
+	  <keybind key="W-m">
+		  <action name="Execute">
+			  <execute>gnome-terminal --title=man --hide-menubar</execute>
+		  </action>
+	  </keybind>
 	  <keybind key="W-o">
 		  <action name="Execute">
 			  <execute>gnome-terminal --command=octave --hide-menubar --title=octave</execute>
@@ -560,8 +567,10 @@
 			  <action name="Focus"/>
 			  <action name="Raise"/>
 		  </mousebind>
-		  <mousebind button="A-Left" action="Click">
-			  <action name="Unshade"/>
+		  <mousebind button="W-Left" action="Click">
+			  <action name="Lower"/>
+			  <action name="FocusToBottom"/>
+			  <action name="Unfocus"/>
 		  </mousebind>
 		  <mousebind button="A-Left" action="Drag">
 			  <action name="Move"/>
@@ -576,7 +585,6 @@
 		  </mousebind>
 		  <mousebind button="A-Middle" action="Press">
 			  <action name="Lower"/>
-			  <action name="FocusToBottom"/>
 			  <action name="Unfocus"/>
 		  </mousebind>
 	  </context>
@@ -970,6 +978,7 @@
 	</application>
 	<application class="Gnome-terminal">
 		<decor>no</decor>
+		<focus>yes</focus>
 	</application>
 	<application title="nvlc">
 		<decor>no</decor>
@@ -983,7 +992,6 @@
 			<width>1/2</width>
 			<height>100%</height>
 		</size>
-		<focus>yes</focus>
 	</application>
 	<application title="octave">
 		<size>
@@ -992,6 +1000,12 @@
 		</size>
 		<display>2</display>
 		<focus>yes</focus>
+	</application>
+	<application title="man">
+		<size>
+			<width>1/2</width>
+			<height>100%</height>
+		</size>
 	</application>
 	<application name="mail.google.com__mail_u*">
 		<decor>no</decor>
