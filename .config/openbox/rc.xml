@@ -231,12 +231,6 @@
 	<keybind key="A-Return">
 		<action name="ToggleFullscreen"/>
 	</keybind>
-	<!--Take a screenshot of the current window with gnome-screenshot when Alt + Print are pressed-->
-	<keybind key="A-Print">
-		<action name="Execute">
-			<command>gnome-screenshot-w</command>
-		</action>
-	</keybind>
 	<!--Keybindings for window switching-->
 	<keybind key="A-Tab">
 		<action name="NextWindow">
@@ -281,6 +275,11 @@
 	<keybind key="Print">
 		<action name="Execute">
 			<command>gnome-screenshot</command>
+		</action>
+	</keybind>
+	<keybind key="A-Print">
+		<action name="Execute">
+			<command>gnome-screenshot -w</command>
 		</action>
 	</keybind>
 	<!--Movement Layer-->
@@ -698,10 +697,6 @@
 	<screenEdgeWarpMouse>false</screenEdgeWarpMouse>
 	<!--Set this to TRUE to move the mouse pointer across the desktop when switching due to hitting the edge of the screen-->
 	<context name="Frame">
-		<mousebind button="A-Left" action="Press">
-			<action name="Focus"/>
-			<action name="Raise"/>
-		</mousebind>
 		<mousebind button="W-Left" action="Click">
 			<action name="Lower"/>
 			<action name="FocusToBottom"/>
@@ -710,17 +705,15 @@
 		<mousebind button="W-Left" action="Drag">
 			<action name="Move"/>
 		</mousebind>
-		<mousebind button="A-Right" action="Press">
-			<action name="Focus"/>
+		<mousebind button="W-Right" action="Click">
 			<action name="Raise"/>
 			<action name="Unshade"/>
 		</mousebind>
-		<mousebind button="A-Right" action="Drag">
+		<mousebind button="W-Right" action="Drag">
 			<action name="Resize"/>
 		</mousebind>
-		<mousebind button="A-Middle" action="Press">
-			<action name="Lower"/>
-			<action name="Unfocus"/>
+		<mousebind button="W-Middle" action="Click">
+			<action name="Close"/>
 		</mousebind>
 	</context>
 	<context name="Titlebar">
