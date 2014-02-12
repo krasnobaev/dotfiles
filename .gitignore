@@ -23,7 +23,7 @@ lost+found
 
 # permission denied
 .cache
-.config/ibus/bus
+.config/ibus
 .gnupg
 .gvfs
 
