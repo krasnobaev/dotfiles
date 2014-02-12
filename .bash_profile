@@ -1,3 +1,4 @@
+#!/bin/bash
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH"
 export USERMAIL="sypwex@gmail.com"
