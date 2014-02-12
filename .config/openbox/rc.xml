@@ -445,6 +445,11 @@
 			<execute>gnome-terminal --command=nvlc --hide-menubar --title=nvlc --working-directory=$HOME/Music</execute>
 		</action>
 	</keybind>
+	<keybind key="W-XF86Tools">
+		<action name="Execute">
+			<execute>chromium-browser --app=https://soundcloud.com/stream</execute>
+		</action>
+	</keybind>
 	<keybind key="XF86Mail">
 		<action name="Execute">
 			<execute>chromium-browser --app=https://mail.google.com/mail/u/1/#inbox</execute>
@@ -1047,6 +1052,12 @@
 	<application groupclass="Gvim">
 		<decor>no</decor>
 		<focus>yes</focus>
+	</application>
+	<application name="soundcloud.com__stream">
+		<maximized>yes</maximized>
+		<decor>no</decor>
+		<focus>yes</focus>
+		<display>3</display>
 	</application>
 </applications>
 </openbox_config>
