@@ -228,6 +228,9 @@
 			<menu>client-menu</menu>
 		</action>
 	</keybind>
+	<keybind key="A-Return">
+		<action name="ToggleFullscreen"/>
+	</keybind>
 	<!--Take a screenshot of the current window with gnome-screenshot when Alt + Print are pressed-->
 	<keybind key="A-Print">
 		<action name="Execute">
@@ -280,60 +283,175 @@
 			<command>gnome-screenshot</command>
 		</action>
 	</keybind>
-	<keybind key="W-KP_1">
+	<!--Movement Layer-->
+	<keybind key="W-C-KP_1">
 		<action name="MoveResizeTo">
 			<x>0</x>
 			<y>-0</y>
 		</action>
 	</keybind>
-	<keybind key="W-KP_2">
+	<keybind key="W-C-KP_2">
 		<action name="MoveResizeTo">
 			<x>center</x>
 			<y>-0</y>
 		</action>
 	</keybind>
-	<keybind key="W-KP_3">
+	<keybind key="W-C-KP_3">
 		<action name="MoveResizeTo">
 			<x>-0</x>
 			<y>-0</y>
 		</action>
 	</keybind>
-	<keybind key="W-KP_4">
+	<keybind key="W-C-KP_4">
 		<action name="MoveResizeTo">
 			<x>0</x>
 			<y>center</y>
 		</action>
 	</keybind>
-	<keybind key="W-KP_5">
+	<keybind key="W-C-KP_5">
 		<action name="MoveResizeTo">
 			<x>center</x>
 			<y>center</y>
 		</action>
 	</keybind>
-	<keybind key="W-KP_6">
+	<keybind key="W-C-KP_6">
 		<action name="MoveResizeTo">
 			<x>-0</x>
 			<y>center</y>
 		</action>
 	</keybind>
+	<keybind key="W-C-KP_7">
+		<action name="MoveResizeTo">
+			<x>0</x>
+			<y>0</y>
+		</action>
+	</keybind>
+	<keybind key="W-C-KP_8">
+		<action name="MoveResizeTo">
+			<x>center</x>
+			<y>0</y>
+		</action>
+	</keybind>
+	<keybind key="W-C-KP_9">
+		<action name="MoveResizeTo">
+			<x>-0</x>
+			<y>0</y>
+		</action>
+	</keybind>
+	<!--END of Movement Layer-->
+	<!--Size Layer-->
+	<keybind key="W-A-KP_7">
+		<action name="GrowToEdgeNorthWest" />
+	</keybind>
+	<keybind key="W-A-KP_9">
+		<action name="GrowToEdgeNorthEast" />
+	</keybind>
+	<keybind key="W-A-KP_1">
+		<action name="GrowToEdgeSouthWest" />
+	</keybind>
+	<keybind key="W-A-KP_3">
+		<action name="GrowToEdgeSouthEast" />
+	</keybind>
+	<keybind key="W-A-KP_8">
+		<action name="GrowToEdgeNorth" />
+	</keybind>
+	<keybind key="W-A-KP_4">
+		<action name="GrowToEdgeWest" />
+	</keybind>
+	<keybind key="W-A-KP_5">
+		<!--normalize-->
+		<action name="Unmaximize"/>
+		<action name="MoveResizeTo">
+			<width client="yes">1/2</width>
+			<height client="yes">1/2</height>
+		</action>
+	</keybind>
+	<keybind key="W-A-KP_6">
+		<action name="GrowToEdgeEast" />
+	</keybind>
+	<keybind key="W-A-KP_2">
+		<action name="GrowToEdgeSouth" />
+	</keybind>
+	<keybind key="W-A-KP_Divide">
+		<action name="ResizeRelative">
+			<right>-20</right>
+		</action>
+	</keybind>
+	<keybind key="W-A-KP_Multiply">
+		<action name="ResizeRelative">
+			<right>20</right>
+		</action>
+	</keybind>
+	<keybind key="W-A-KP_Subtract">
+		<action name="ResizeRelative">
+			<bottom>-20</bottom>
+		</action>
+	</keybind>
+	<keybind key="W-A-KP_Add">
+		<action name="ResizeRelative">
+			<bottom>20</bottom>
+		</action>
+	</keybind>
+	<keybind key="W-A-KP_0">
+		<action name="ToggleMaximizeHorz" />
+	</keybind>
+	<keybind key="W-A-KP_Decimal">
+		<action name="ToggleShade" />
+	</keybind>
+	<keybind key="W-A-KP_Enter">
+		<action name="ToggleMaximizeVert" />
+	</keybind>
+	<!--END of Size Layer-->
+	<!--Focus Layer-->
 	<keybind key="W-KP_7">
-		<action name="MoveResizeTo">
-			<x>0</x>
-			<y>0</y>
-		</action>
-	</keybind>
-	<keybind key="W-KP_8">
-		<action name="MoveResizeTo">
-			<x>center</x>
-			<y>0</y>
-		</action>
+		<action name="DirectionalFocusNorthWest"/>
 	</keybind>
 	<keybind key="W-KP_9">
-		<action name="MoveResizeTo">
-			<x>-0</x>
-			<y>0</y>
-		</action>
+		<action name="DirectionalFocusNorthEast"/>
 	</keybind>
+	<keybind key="W-KP_1">
+		<action name="DirectionalFocusSouthWest"/>
+	</keybind>
+	<keybind key="W-KP_3">
+		<action name="DirectionalFocusSouthEast"/>
+	</keybind>
+	<keybind key="W-S-KP_5">
+		<action name="PreviousWindow"/>
+	</keybind>
+	<keybind key="W-KP_8">
+		<action name="DirectionalFocusNorth"/>
+	</keybind>
+	<keybind key="W-KP_4">
+		<action name="DirectionalFocusWest"/>
+	</keybind>
+	<keybind key="W-KP_5">
+		<action name="NextWindow"/>
+	</keybind>
+	<keybind key="W-KP_6">
+		<action name="DirectionalFocusEast"/>
+	</keybind>
+	<keybind key="W-KP_2">
+		<action name="DirectionalFocusSouth"/>
+	</keybind>
+	<keybind key="W-KP_0">
+		<action name="DesktopPrevious"/>
+	</keybind>
+	<keybind key="W-KP_Decimal">
+		<action name="DesktopNext"/>
+	</keybind>
+	<keybind key="W-KP_Multiply">
+		<action name="ToggleOmnipresent"/>
+	</keybind>
+	<keybind key="W-KP_Subtract">
+		<action name="Raise"/>
+	</keybind>
+	<keybind key="W-KP_Add">
+		<action name="Lower"/>
+	</keybind>
+	<keybind key="W-KP_Enter">
+		<action name="ToggleDecorations"/>
+	</keybind>
+	<!--END Focus Layer-->
 	<!--mememe.sypwex-->
 	<keybind key="W-Right">
 		<action name="Unmaximize"/>
@@ -412,11 +530,8 @@
 	<keybind key="W-F8">
 		<action name="ToggleAlwaysOnTop"/>
 	</keybind>
-	<keybind key="W-F11">
-		<action name="Reconfigure"/>
-	</keybind>
 	<keybind key="W-F12">
-		<action name="ToggleFullscreen"/>
+		<action name="Reconfigure"/>
 	</keybind>
 	<keybind key="W-A-F12">
 		<action name="AddDesktop"/>
@@ -557,6 +672,16 @@
 			<command>gnome-terminal --hide-menubar</command>
 		</action>
 	</keybind>
+	<keybind key="W-v">
+		<action name="Execute">
+			<execute>vpuml</execute>
+		</action>
+	</keybind>
+	<keybind key="W-x">
+		<action name="Execute">
+			<execute>xmind</execute>
+		</action>
+	</keybind>
 	<keybind key="W-z">
 		<action name="Execute">
 			<execute>zotero</execute>
@@ -582,7 +707,7 @@
 			<action name="FocusToBottom"/>
 			<action name="Unfocus"/>
 		</mousebind>
-		<mousebind button="A-Left" action="Drag">
+		<mousebind button="W-Left" action="Drag">
 			<action name="Move"/>
 		</mousebind>
 		<mousebind button="A-Right" action="Press">
@@ -1058,6 +1183,14 @@
 		<decor>no</decor>
 		<focus>yes</focus>
 		<display>3</display>
+	</application>
+	<application class="XTerm">
+		<decor>no</decor>
+		<focus>yes</focus>
+	</application>
+	<application class="Terminator">
+		<decor>no</decor>
+		<focus>yes</focus>
 	</application>
 </applications>
 </openbox_config>
