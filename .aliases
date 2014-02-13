@@ -119,7 +119,7 @@ alias reload="exec $SHELL -l"
 command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu"
 
 # http://stackoverflow.com/questions/424071/list-all-the-files-for-a-commit-in-git/424142#424142
-alias gitshow="diff-tree --no-commit-id --name-only -r"
+alias gitshow="git diff-tree --no-commit-id --name-only -r"
 
 alias chrome="chromium-browser"
 alias vpuml="/usr/local/bin/Visual_Paradigm_for_UML_CE_10.2/bin/Visual_Paradigm_for_UML&"
