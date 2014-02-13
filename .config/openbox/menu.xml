@@ -1,0 +1,23 @@
+<menu id="ID" label="TITLE">
+	<!-- this is a menu item, such as a program -->
+	<item label="LABEL">
+		ACTIONS
+	</item>
+	<!-- this is a menu header -->
+	<separator label="La la" />
+	<!-- this links to a sub menu -->
+	<menu id="ID" />
+	<!-- this is a small line separator -->
+	<separator />
+	<!-- this also links to a sub menu, which is defined inline -->
+	<menu id="ID" label="TITLE">
+		<item label="LABEL">
+			ACTIONS
+		</item>
+	</menu>
+	<separator />
+	<item label="LABEL">
+		ACTIONS
+	</item>
+</menu>
+
