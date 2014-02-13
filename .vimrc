@@ -97,10 +97,6 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
 
-
-
-
-set nocompatible " be iMproved
 filetype off " required!
 
 set rtp+=~/.vim/bundle/vundle/
