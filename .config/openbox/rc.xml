@@ -192,10 +192,11 @@
 			<wrap>yes</wrap>
 		</action>
 	</keybind>
-	<keybind key="C-S-Escape">
-	<action name="Execute">
-		<command>gnome-terminal --command=top --hide-menubar</command>
-	</action>
+	<keybind key="W-Tab">
+		<action name="GoToDesktop">
+			<to>next</to>
+			<wrap>yes</wrap>
+		</action>
 	</keybind>
 	<keybind key="W-S-Tab">
 		<action name="GoToDesktop">
@@ -203,35 +204,6 @@
 			<wrap>yes</wrap>
 		</action>
 	</keybind>
-	<keybind key="W-Tab">
-		<action name="GoToDesktop">
-			<to>next</to>
-			<wrap>yes</wrap>
-		</action>
-	</keybind>
-	<keybind key="W-Escape">
-		<action name="ShowMenu">
-			<menu>client-list-combined-menu</menu>
-		</action>
-	</keybind>
-	<!--Keybindings for windows-->
-	<keybind key="A-F4">
-		<action name="Close"/>
-	</keybind>
-	<keybind key="A-Escape">
-		<action name="Lower"/>
-		<action name="FocusToBottom"/>
-		<action name="Unfocus"/>
-	</keybind>
-	<keybind key="A-space">
-		<action name="ShowMenu">
-			<menu>client-menu</menu>
-		</action>
-	</keybind>
-	<keybind key="A-Return">
-		<action name="ToggleFullscreen"/>
-	</keybind>
-	<!--Keybindings for window switching-->
 	<keybind key="A-Tab">
 		<action name="NextWindow">
 			<finalactions>
@@ -249,6 +221,58 @@
 				<action name="Unshade"/>
 			</finalactions>
 		</action>
+	</keybind>
+	<!--functional keys for working with desktops-->
+	<keybind key="W-F1">
+		<action name="GoToDesktop">
+			<to>1</to>
+		</action>
+	</keybind>
+	<keybind key="W-S-F1">
+		<action name="SendToDesktop">
+			<to>1</to>
+		</action>
+	</keybind>
+	<keybind key="A-F2">
+		<action name="Execute">
+			<execute>synapse</execute>
+		</action>
+	</keybind>
+	<keybind key="W-F2">
+		<action name="GoToDesktop">
+			<to>2</to>
+		</action>
+	</keybind>
+	<keybind key="W-S-F2">
+		<action name="SendToDesktop">
+			<to>2</to>
+		</action>
+	</keybind>
+	<keybind key="W-F3">
+		<action name="GoToDesktop">
+			<to>3</to>
+		</action>
+	</keybind>
+	<keybind key="W-S-F3">
+		<action name="SendToDesktop">
+			<to>3</to>
+		</action>
+	</keybind>
+	<keybind key="W-F4">
+		<action name="GoToDesktop">
+			<to>4</to>
+		</action>
+	</keybind>
+	<keybind key="W-S-F4">
+		<action name="SendToDesktop">
+			<to>4</to>
+		</action>
+	</keybind>
+	<keybind key="W-Insert">
+		<action name="AddDesktop"/>
+	</keybind>
+	<keybind key="W-Delete">
+		<action name="RemoveDesktop"/>
 	</keybind>
 	<!--Keybindings for window moving to other desktops with the arrow keys-->
 	<keybind key="W-S-Right">
@@ -269,17 +293,6 @@
 	<keybind key="W-S-Down">
 		<action name="DirectionalCycleWindows">
 			<direction>down</direction>
-		</action>
-	</keybind>
-	<!--Launch gnome-screenshot when Print is pressed-->
-	<keybind key="Print">
-		<action name="Execute">
-			<command>gnome-screenshot</command>
-		</action>
-	</keybind>
-	<keybind key="A-Print">
-		<action name="Execute">
-			<command>gnome-screenshot -w</command>
 		</action>
 	</keybind>
 	<!--Movement Layer-->
@@ -400,7 +413,30 @@
 	<keybind key="W-A-KP_Enter">
 		<action name="ToggleMaximizeVert" />
 	</keybind>
-	<!--END of Size Layer-->
+	<!--in addition...-->
+	<keybind key="W-Right">
+		<action name="Unmaximize"/>
+		<action name="MoveResizeTo">
+			<x>-0</x>
+			<width client="yes">1/2</width>
+		</action>
+		<action name="Maximize">
+			<direction>vertical</direction>
+		</action>
+	</keybind>
+	<keybind key="W-Left">
+		<action name="Unmaximize"/>
+		<action name="MoveResizeTo">
+			<x>0</x>
+			<width client="yes">1/2</width>
+		</action>
+		<action name="Maximize">
+			<direction>vertical</direction>
+		</action>
+	</keybind>
+	<keybind key="A-Return">
+		<action name="ToggleFullscreen"/>
+	</keybind>
 	<!--Focus Layer-->
 	<keybind key="W-KP_7">
 		<action name="DirectionalFocusNorthWest"/>
@@ -450,78 +486,17 @@
 	<keybind key="W-KP_Enter">
 		<action name="ToggleDecorations"/>
 	</keybind>
-	<!--END Focus Layer-->
-	<!--mememe.sypwex-->
-	<keybind key="W-Right">
-		<action name="Unmaximize"/>
-		<action name="MoveResizeTo">
-			<x>-0</x>
-			<width client="yes">1/2</width>
-		</action>
-		<action name="Maximize">
-			<direction>vertical</direction>
-		</action>
-	</keybind>
-	<keybind key="W-Left">
-		<action name="Unmaximize"/>
-		<action name="MoveResizeTo">
-			<x>0</x>
-			<width client="yes">1/2</width>
-		</action>
-		<action name="Maximize">
-			<direction>vertical</direction>
-		</action>
-	</keybind>
+	<!--in addition...-->
 	<keybind key="W-Up">
 		<action name="ToggleMaximizeFull"/>
 	</keybind>
 	<keybind key="W-Down">
 		<action name="ToggleMaximizeVert"/>
 	</keybind>
-	<keybind key="W-F1">
-		<action name="GoToDesktop">
-			<to>1</to>
-		</action>
-	</keybind>
-	<keybind key="W-S-F1">
-		<action name="SendToDesktop">
-			<to>1</to>
-		</action>
-	</keybind>
-	<keybind key="A-F2">
-		<action name="Execute">
-			<execute>synapse</execute>
-		</action>
-	</keybind>
-	<keybind key="W-F2">
-		<action name="GoToDesktop">
-			<to>2</to>
-		</action>
-	</keybind>
-	<keybind key="W-S-F2">
-		<action name="SendToDesktop">
-			<to>2</to>
-		</action>
-	</keybind>
-	<keybind key="W-F3">
-		<action name="GoToDesktop">
-			<to>3</to>
-		</action>
-	</keybind>
-	<keybind key="W-S-F3">
-		<action name="SendToDesktop">
-			<to>3</to>
-		</action>
-	</keybind>
-	<keybind key="W-F4">
-		<action name="GoToDesktop">
-			<to>4</to>
-		</action>
-	</keybind>
-	<keybind key="W-S-F4">
-		<action name="SendToDesktop">
-			<to>4</to>
-		</action>
+	<keybind key="A-Escape">
+		<action name="Lower"/>
+		<action name="FocusToBottom"/>
+		<action name="Unfocus"/>
 	</keybind>
 	<keybind key="W-F5">
 		<action name="ToggleAlwaysOnBottom"/>
@@ -529,21 +504,7 @@
 	<keybind key="W-F8">
 		<action name="ToggleAlwaysOnTop"/>
 	</keybind>
-	<keybind key="W-F12">
-		<action name="Reconfigure"/>
-	</keybind>
-	<keybind key="W-A-F12">
-		<action name="AddDesktop"/>
-	</keybind>
-	<keybind key="W-C-F12">
-		<action name="RemoveDesktop"/>
-	</keybind>
-	<keybind key="W-A-Up">
-		<action name="ToggleAlwaysOnTop"/>
-	</keybind>
-	<keybind key="W-A-Down">
-		<action name="ToggleAlwaysOnBottom"/>
-	</keybind>
+	<!--application calls from by special keys-->
 	<keybind key="XF86AudioRaiseVolume">
 		<action name="Execute">
 			<execute>amixer set Master 5+ unmute</execute>
@@ -559,7 +520,7 @@
 			<execute>gnome-terminal --command=nvlc --hide-menubar --title=nvlc --working-directory=$HOME/Music</execute>
 		</action>
 	</keybind>
-	<keybind key="W-XF86Tools">
+	<keybind key="A-XF86Tools">
 		<action name="Execute">
 			<execute>chromium-browser --app=https://soundcloud.com/stream</execute>
 		</action>
@@ -614,6 +575,7 @@
 			<execute>gvim</execute>
 		</action>
 	</keybind>
+	<!--application calls from a-z keys-->
 	<keybind key="W-c">
 		<!--center, normalize-->
 		<action name="Unmaximize"/>
@@ -627,10 +589,7 @@
 	<keybind key="W-d">
 		<action name="ToggleShowDesktop"/>
 	</keybind>
-	<keybind key="C-A-d">
-		<action name="ToggleDockAutohide"/>
-	</keybind>
-	<keybind key="W-S-d">
+	<keybind key="W-A-d">
 		<action name="ToggleDecorations"/>
 	</keybind>
 	<keybind key="W-e">
@@ -684,6 +643,48 @@
 	<keybind key="W-z">
 		<action name="Execute">
 			<execute>zotero</execute>
+		</action>
+	</keybind>
+	<!--Other calls-->
+	<keybind key="Print">
+		<action name="Execute">
+			<command>gnome-screenshot</command>
+		</action>
+	</keybind>
+	<keybind key="A-Print">
+		<action name="Execute">
+			<command>gnome-screenshot -w</command>
+		</action>
+	</keybind>
+	<keybind key="C-S-Escape">
+	<action name="Execute">
+		<command>gnome-terminal --command=top --hide-menubar</command>
+	</action>
+	</keybind>
+	<keybind key="W-F12">
+		<action name="Reconfigure"/>
+	</keybind>
+	<keybind key="A-F4">
+		<action name="Close"/>
+	</keybind>
+	<keybind key="A-space">
+		<action name="ShowMenu">
+			<menu>client-menu</menu>
+		</action>
+	</keybind>
+	<keybind key="W-Escape">
+		<action name="ShowMenu">
+			<menu>client-list-combined-menu</menu>
+		</action>
+	</keybind>
+	<keybind key="W-1">
+		<action name="ShowMenu">
+			<menu>root-menu</menu>
+		</action>
+	</keybind>
+	<keybind key="W-S-1">
+		<action name="ShowMenu">
+			<menu>client-layer-menu</menu>
 		</action>
 	</keybind>
 </keyboard>
