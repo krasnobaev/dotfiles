@@ -111,13 +111,14 @@
 			are not already set by other applications, or saved
 			in your session use obconf if you want to change these
 			without having to log out and back in-->
-	<number>4</number>
+	<number>5</number>
 	<firstdesk>1</firstdesk>
 	<names>
 		<name>Management</name>
-		<name>PhD</name>
+		<name>Work</name>
 		<name>Supplementary</name>
-		<name>Octave</name>
+		<name>Complementry</name>
+		<name>Personal Wiki</name>
 	</names>
 	<popupTime>400</popupTime>
 </desktops>
@@ -266,6 +267,16 @@
 	<keybind key="W-S-F4">
 		<action name="SendToDesktop">
 			<to>4</to>
+		</action>
+	</keybind>
+	<keybind key="W-F5">
+		<action name="GoToDesktop">
+			<to>5</to>
+		</action>
+	</keybind>
+	<keybind key="W-S-F5">
+		<action name="SendToDesktop">
+			<to>5</to>
 		</action>
 	</keybind>
 	<keybind key="W-Insert">
@@ -498,10 +509,10 @@
 		<action name="FocusToBottom"/>
 		<action name="Unfocus"/>
 	</keybind>
-	<keybind key="W-F5">
+	<keybind key="W-Next">
 		<action name="ToggleAlwaysOnBottom"/>
 	</keybind>
-	<keybind key="W-F8">
+	<keybind key="W-Prior">
 		<action name="ToggleAlwaysOnTop"/>
 	</keybind>
 	<!--application calls from by special keys-->
@@ -565,11 +576,6 @@
 			<execute>chromium-browser --app=https://launchpad.37signals.com/backpack/signin</execute>
 		</action>
 	</keybind>
-	<keybind key="A-XF86Favorites">
-		<action name="Execute">
-			<execute>dolphin "/home/sypwex/Desktop/2DO/"</execute>
-		</action>
-	</keybind>
 	<keybind key="XF86Eject">
 		<action name="Execute">
 			<execute>gvim</execute>
@@ -597,7 +603,7 @@
 			<command>dolphin</command>
 		</action>
 	</keybind>
-	<keybind key="W-k">
+	<keybind key="W-S-k">
 		<action name="Execute">
 			<execute>gnome-terminal --command=xev</execute>
 		</action>
@@ -614,7 +620,7 @@
 	</keybind>
 	<keybind key="W-p">
 		<action name="Execute">
-			<execute>gnome-terminal --command="gvim ~/.config/openbox/rc.xml" --title=openboxpreferences</execute>
+			<execute>gvim ~/.config/openbox/rc.xml</execute>
 		</action>
 	</keybind>
 	<keybind key="W-r">
@@ -624,6 +630,11 @@
 	</keybind>
 	<keybind key="W-s">
 		<action name="Iconify"/>
+	</keybind>
+	<keybind key="W-t">
+		<action name="Execute">
+			<command>pytyle2</command>
+		</action>
 	</keybind>
 	<keybind key="C-A-t">
 		<action name="Execute">
@@ -656,33 +667,53 @@
 			<command>gnome-screenshot -w</command>
 		</action>
 	</keybind>
+	<keybind key="W-Home">
+		<action name="Execute">
+			<command>dolphin '~Desktop'</command>
+		</action>
+	</keybind>
 	<keybind key="C-S-Escape">
 	<action name="Execute">
 		<command>gnome-terminal --command=top --hide-menubar</command>
 	</action>
-	</keybind>
-	<keybind key="W-F12">
-		<action name="Reconfigure"/>
-	</keybind>
-	<keybind key="A-F4">
-		<action name="Close"/>
-	</keybind>
-	<keybind key="A-space">
-		<action name="ShowMenu">
-			<menu>client-menu</menu>
-		</action>
 	</keybind>
 	<keybind key="W-Escape">
 		<action name="ShowMenu">
 			<menu>client-list-combined-menu</menu>
 		</action>
 	</keybind>
+	<keybind key="A-F4">
+		<action name="Close"/>
+	</keybind>
+	<keybind key="W-F12">
+		<action name="Reconfigure"/>
+	</keybind>
+	<keybind key="A-space">
+		<action name="ShowMenu">
+			<menu>client-menu</menu>
+		</action>
+	</keybind>
 	<keybind key="W-1">
+		<action name="If">
+			<desktop>5</desktop>
+			<then>
+				<action name="GoToDesktop">
+					<to>last</to>
+				</action>
+			</then>
+			<else>
+				<action name="GoToDesktop">
+					<to>5</to>
+				</action>
+			</else>
+		</action>
+	</keybind>
+	<keybind key="W-2">
 		<action name="ShowMenu">
 			<menu>root-menu</menu>
 		</action>
 	</keybind>
-	<keybind key="W-S-1">
+	<keybind key="W-A-2">
 		<action name="ShowMenu">
 			<menu>client-layer-menu</menu>
 		</action>
@@ -699,6 +730,9 @@
 	<!--Set this to TRUE to move the mouse pointer across the desktop when switching due to hitting the edge of the screen-->
 	<context name="Frame">
 		<mousebind button="W-Left" action="Click">
+			<action name="Iconify"/>
+		</mousebind>
+		<mousebind button="W-A-Left" action="Click">
 			<action name="Lower"/>
 			<action name="FocusToBottom"/>
 			<action name="Unfocus"/>
@@ -1114,12 +1148,6 @@
 		<maximized>yes</maximized>
 		<layer>below</layer>
 		<focus>yes</focus>
-	</application>
-	<application title="openboxpreferences">
-		<size>
-			<width>1/2</width>
-			<height>100%</height>
-		</size>
 	</application>
 	<application title="octave">
 		<size>
