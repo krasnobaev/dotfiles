@@ -111,13 +111,14 @@
 			are not already set by other applications, or saved
 			in your session use obconf if you want to change these
 			without having to log out and back in-->
-	<number>5</number>
+	<number>6</number>
 	<firstdesk>1</firstdesk>
 	<names>
 		<name>Management</name>
 		<name>Work</name>
 		<name>Supplementary</name>
-		<name>Complementry</name>
+		<name>Complementary</name>
+		<name>Alphabetic</name>
 		<name>Personal Wiki</name>
 	</names>
 	<popupTime>400</popupTime>
@@ -279,6 +280,16 @@
 			<to>5</to>
 		</action>
 	</keybind>
+	<keybind key="W-F6">
+		<action name="GoToDesktop">
+			<to>6</to>
+		</action>
+	</keybind>
+	<keybind key="W-S-F6">
+		<action name="SendToDesktop">
+			<to>6</to>
+		</action>
+	</keybind>
 	<keybind key="W-Insert">
 		<action name="AddDesktop"/>
 	</keybind>
@@ -286,24 +297,32 @@
 		<action name="RemoveDesktop"/>
 	</keybind>
 	<!--Keybindings for window moving to other desktops with the arrow keys-->
-	<keybind key="W-S-Right">
-		<action name="DirectionalCycleWindows">
-			<direction>right</direction>
+	<keybind key="W-C-Right">
+		<action name="SendToDesktop">
+			<to>right</to>
+			<wrap>yes</wrap>
+			<follow>yes</follow>
 		</action>
 	</keybind>
-	<keybind key="W-S-Left">
-		<action name="DirectionalCycleWindows">
-			<direction>left</direction>
+	<keybind key="W-C-Left">
+		<action name="SendToDesktop">
+			<to>left</to>
+			<wrap>yes</wrap>
+			<follow>yes</follow>
 		</action>
 	</keybind>
-	<keybind key="W-S-Up">
-		<action name="DirectionalCycleWindows">
-			<direction>up</direction>
+	<keybind key="W-C-Up">
+		<action name="SendToDesktop">
+			<to>up</to>
+			<wrap>yes</wrap>
+			<follow>yes</follow>
 		</action>
 	</keybind>
-	<keybind key="W-S-Down">
-		<action name="DirectionalCycleWindows">
-			<direction>down</direction>
+	<keybind key="W-C-Down">
+		<action name="SendToDesktop">
+			<to>down</to>
+			<wrap>yes</wrap>
+			<follow>yes</follow>
 		</action>
 	</keybind>
 	<!--Movement Layer-->
@@ -695,7 +714,7 @@
 	</keybind>
 	<keybind key="W-1">
 		<action name="If">
-			<desktop>5</desktop>
+			<desktop>6</desktop>
 			<then>
 				<action name="GoToDesktop">
 					<to>last</to>
@@ -703,7 +722,7 @@
 			</then>
 			<else>
 				<action name="GoToDesktop">
-					<to>5</to>
+					<to>6</to>
 				</action>
 			</else>
 		</action>
