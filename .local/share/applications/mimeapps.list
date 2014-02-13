@@ -1,5 +1,6 @@
 [Added Associations]
 application/epub+zip=FBReader.desktop;ebook-viewer.desktop;calibre.desktop;file-roller-2.desktop;gvim.desktop;file-roller-4.desktop;
+application/gzip=file-roller-6.desktop;
 application/mime=chromium-browser.desktop;
 application/octet-stream=gvim.desktop;gvim;file-roller.desktop;
 application/pdf=acroread.desktop;pdfmeta_20120418.jar.desktop;gvim;emacs23.desktop;file-roller.desktop;bless.desktop;gnome-font-viewer.desktop;evince.desktop;kde4-okularApplication_pdf.desktop;mendeleydesktop.desktop;xpdf.desktop;gimp.desktop;gv.desktop;display.im6.desktop;texworks.desktop;
