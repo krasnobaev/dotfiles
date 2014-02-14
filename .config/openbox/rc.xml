@@ -226,68 +226,188 @@
 	</keybind>
 	<!--functional keys for working with desktops-->
 	<keybind key="W-F1">
-		<action name="GoToDesktop">
-			<to>1</to>
+		<action name="If">
+			<activedesktop>1</activedesktop>
+			<then>
+				<action name="GoToDesktop">
+					<to>last</to>
+				</action>
+			</then>
+			<else>
+				<action name="GoToDesktop">
+					<to>1</to>
+				</action>
+			</else>
 		</action>
 	</keybind>
 	<keybind key="W-S-F1">
-		<action name="SendToDesktop">
-			<to>1</to>
-		</action>
-	</keybind>
-	<keybind key="A-F2">
-		<action name="Execute">
-			<execute>synapse</execute>
+		<action name="If">
+			<activedesktop>1</activedesktop>
+			<then>
+				<action name="SendToDesktop">
+					<to>last</to>
+				</action>
+			</then>
+			<else>
+				<action name="SendToDesktop">
+					<to>1</to>
+				</action>
+			</else>
 		</action>
 	</keybind>
 	<keybind key="W-F2">
-		<action name="GoToDesktop">
-			<to>2</to>
+		<action name="If">
+			<activedesktop>2</activedesktop>
+			<then>
+				<action name="GoToDesktop">
+					<to>last</to>
+				</action>
+			</then>
+			<else>
+				<action name="GoToDesktop">
+					<to>2</to>
+				</action>
+			</else>
 		</action>
 	</keybind>
 	<keybind key="W-S-F2">
-		<action name="SendToDesktop">
-			<to>2</to>
+		<action name="If">
+			<activedesktop>2</activedesktop>
+			<then>
+				<action name="SendToDesktop">
+					<to>last</to>
+				</action>
+			</then>
+			<else>
+				<action name="SendToDesktop">
+					<to>2</to>
+				</action>
+			</else>
 		</action>
 	</keybind>
 	<keybind key="W-F3">
-		<action name="GoToDesktop">
-			<to>3</to>
+		<action name="If">
+			<activedesktop>3</activedesktop>
+			<then>
+				<action name="GoToDesktop">
+					<to>last</to>
+				</action>
+			</then>
+			<else>
+				<action name="GoToDesktop">
+					<to>3</to>
+				</action>
+			</else>
 		</action>
 	</keybind>
 	<keybind key="W-S-F3">
-		<action name="SendToDesktop">
-			<to>3</to>
+		<action name="If">
+			<activedesktop>3</activedesktop>
+			<then>
+				<action name="SendToDesktop">
+					<to>last</to>
+				</action>
+			</then>
+			<else>
+				<action name="SendToDesktop">
+					<to>3</to>
+				</action>
+			</else>
 		</action>
 	</keybind>
 	<keybind key="W-F4">
-		<action name="GoToDesktop">
-			<to>4</to>
+		<action name="If">
+			<activedesktop>4</activedesktop>
+			<then>
+				<action name="GoToDesktop">
+					<to>last</to>
+				</action>
+			</then>
+			<else>
+				<action name="GoToDesktop">
+					<to>4</to>
+				</action>
+			</else>
 		</action>
 	</keybind>
 	<keybind key="W-S-F4">
-		<action name="SendToDesktop">
-			<to>4</to>
+		<action name="If">
+			<activedesktop>4</activedesktop>
+			<then>
+				<action name="SendToDesktop">
+					<to>last</to>
+				</action>
+			</then>
+			<else>
+				<action name="SendToDesktop">
+					<to>4</to>
+				</action>
+			</else>
 		</action>
 	</keybind>
 	<keybind key="W-F5">
-		<action name="GoToDesktop">
-			<to>5</to>
+		<action name="If">
+			<activedesktop>5</activedesktop>
+			<then>
+				<action name="GoToDesktop">
+					<to>last</to>
+				</action>
+			</then>
+			<else>
+				<action name="GoToDesktop">
+					<to>5</to>
+				</action>
+			</else>
 		</action>
 	</keybind>
 	<keybind key="W-S-F5">
-		<action name="SendToDesktop">
-			<to>5</to>
+		<action name="If">
+			<activedesktop>5</activedesktop>
+			<then>
+				<action name="SendToDesktop">
+					<to>last</to>
+				</action>
+			</then>
+			<else>
+				<action name="SendToDesktop">
+					<to>5</to>
+				</action>
+			</else>
 		</action>
 	</keybind>
 	<keybind key="W-F6">
-		<action name="GoToDesktop">
-			<to>6</to>
+		<action name="If">
+			<activedesktop>6</activedesktop>
+			<then>
+				<action name="GoToDesktop">
+					<to>last</to>
+				</action>
+			</then>
+			<else>
+				<action name="GoToDesktop">
+					<to>6</to>
+				</action>
+			</else>
 		</action>
 	</keybind>
 	<keybind key="W-S-F6">
-		<action name="SendToDesktop">
-			<to>6</to>
+		<action name="If">
+			<activedesktop>6</activedesktop>
+			<then>
+				<action name="SendToDesktop">
+					<to>last</to>
+				</action>
+			</then>
+			<else>
+				<action name="SendToDesktop">
+					<to>6</to>
+				</action>
+			</else>
+		</action>
+	</keybind>
+	<keybind key="W-BackSpace">
+		<action name="GoToDesktop">
+			<to>last</to>
 		</action>
 	</keybind>
 	<keybind key="W-Insert">
@@ -701,6 +821,11 @@
 			<menu>client-list-combined-menu</menu>
 		</action>
 	</keybind>
+	<keybind key="A-F2">
+		<action name="Execute">
+			<execute>synapse</execute>
+		</action>
+	</keybind>
 	<keybind key="A-F4">
 		<action name="Close"/>
 	</keybind>
@@ -714,7 +839,7 @@
 	</keybind>
 	<keybind key="W-1">
 		<action name="If">
-			<desktop>6</desktop>
+			<activedesktop>6</activedesktop>
 			<then>
 				<action name="GoToDesktop">
 					<to>last</to>
@@ -749,12 +874,12 @@
 	<!--Set this to TRUE to move the mouse pointer across the desktop when switching due to hitting the edge of the screen-->
 	<context name="Frame">
 		<mousebind button="W-Left" action="Click">
-			<action name="Iconify"/>
-		</mousebind>
-		<mousebind button="W-A-Left" action="Click">
 			<action name="Lower"/>
 			<action name="FocusToBottom"/>
 			<action name="Unfocus"/>
+		</mousebind>
+		<mousebind button="W-button9" action="Click">
+			<action name="Iconify"/>
 		</mousebind>
 		<mousebind button="W-Left" action="Drag">
 			<action name="Move"/>
@@ -1232,6 +1357,12 @@
 	<application class="Terminator">
 		<decor>no</decor>
 		<focus>yes</focus>
+	</application>
+	<application class="Workrave">
+		<decor>no</decor>
+		<focus>no</focus>
+		<layer>above</layer>
+		<desktop>all</desktop>
 	</application>
 </applications>
 </openbox_config>
