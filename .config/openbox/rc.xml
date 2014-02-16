@@ -119,7 +119,7 @@
 		<name>Supplementary</name>
 		<name>Complementary</name>
 		<name>Alphabetic</name>
-		<name>Personal Wiki</name>
+		<name>OrgMode</name>
 	</names>
 	<popupTime>400</popupTime>
 </desktops>
@@ -154,8 +154,8 @@
 	<!--(Top | Bottom) (Left | Right |) | Top | Bottom | Left | Right | Floating-->
 	<floatingX>0</floatingX>
 	<floatingY>0</floatingY>
-	<noStrut>no</noStrut>
-	<stacking>Above</stacking>
+	<noStrut>yes</noStrut>
+	<stacking>Below</stacking>
 	<!--'Above', 'Normal', or 'Below'-->
 	<direction>Vertical</direction>
 	<!--'Vertical' or 'Horizontal'-->
@@ -410,6 +410,21 @@
 			<to>last</to>
 		</action>
 	</keybind>
+	<keybind key="W-XF86Tools">
+		<action name="If">
+			<activedesktop>3</activedesktop>
+			<then>
+				<action name="GoToDesktop">
+					<to>last</to>
+				</action>
+			</then>
+			<else>
+				<action name="GoToDesktop">
+					<to>3</to>
+				</action>
+			</else>
+		</action>
+	</keybind>
 	<keybind key="W-Insert">
 		<action name="AddDesktop"/>
 	</keybind>
@@ -584,7 +599,7 @@
 			<direction>vertical</direction>
 		</action>
 	</keybind>
-	<keybind key="A-Return">
+	<keybind key="W-Return">
 		<action name="ToggleFullscreen"/>
 	</keybind>
 	<!--Focus Layer-->
@@ -680,6 +695,11 @@
 			<execute>chromium-browser --app=https://mail.google.com/mail/u/1/#inbox</execute>
 		</action>
 	</keybind>
+	<keybind key="A-XF86Mail">
+		<action name="Execute">
+			<execute>chromium-browser --app=https://mail.google.com/mail/u/0/#inbox</execute>
+		</action>
+	</keybind>
 	<keybind key="XF86HomePage">
 		<action name="Execute">
 			<execute>chromium-browser</execute>
@@ -720,6 +740,11 @@
 			<execute>gvim</execute>
 		</action>
 	</keybind>
+	<keybind key="A-XF86Eject">
+		<action name="Execute">
+			<execute>emacs</execute>
+		</action>
+	</keybind>
 	<!--application calls from a-z keys-->
 	<keybind key="W-c">
 		<!--center, normalize-->
@@ -747,6 +772,11 @@
 			<execute>gnome-terminal --command=xev</execute>
 		</action>
 		</keybind>
+	<keybind key="W-l">
+		<action name="Execute">
+			<execute>gnome-screensaver-command -l</execute>
+		</action>
+	</keybind>
 	<keybind key="W-m">
 		<action name="Execute">
 			<execute>gnome-terminal --title=man --hide-menubar</execute>
@@ -808,7 +838,7 @@
 	</keybind>
 	<keybind key="W-Home">
 		<action name="Execute">
-			<command>dolphin '~Desktop'</command>
+			<command>dolphin ~/Desktop</command>
 		</action>
 	</keybind>
 	<keybind key="C-S-Escape">
@@ -990,15 +1020,19 @@
 	<context name="Client">
 		<mousebind button="Left" action="Press">
 			<action name="Focus"/>
+		</mousebind>
+		<mousebind button="A-Left" action="Press">
+			<action name="Focus"/>
 			<action name="Raise"/>
 		</mousebind>
 		<mousebind button="Middle" action="Press">
 			<action name="Focus"/>
-			<action name="Raise"/>
 		</mousebind>
 		<mousebind button="Right" action="Press">
-			<action name="Focus"/>
 			<action name="Raise"/>
+		</mousebind>
+		<mousebind button="button8" action="Drag">
+			<action name="Move"/>
 		</mousebind>
 	</context>
 	<context name="Icon">
@@ -1341,6 +1375,10 @@
 		<focus>yes</focus>
 	</application>
 	<application groupclass="Gvim">
+		<decor>no</decor>
+		<focus>yes</focus>
+	</application>
+	<application groupclass="Emacs">
 		<decor>no</decor>
 		<focus>yes</focus>
 	</application>
