@@ -772,7 +772,7 @@
 			<execute>gnome-terminal --command=xev</execute>
 		</action>
 		</keybind>
-	<keybind key="W-l">
+	<keybind key="W-A-l">
 		<action name="Execute">
 			<execute>gnome-screensaver-command -l</execute>
 		</action>
