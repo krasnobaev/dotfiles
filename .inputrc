@@ -38,3 +38,8 @@ set convert-meta off
 
 # Use Alt/Meta + Delete to delete the preceding word
 "\e[3;3~": kill-word
+
+# mappings for Ctrl-left-arrow and Ctrl-right-arrow for word moving
+# http://stackoverflow.com/questions/5029118/bash-ctrl-to-move-cursor-between-words-strings
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
