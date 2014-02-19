@@ -1313,15 +1313,16 @@
 
   # end of the example
 -->
+	<application class="*">
+		<decor>*</decor>
+	</application>
 	<application class="trayer">
 		<layer>below</layer>
 	</application>
 	<application class="Gnome-terminal">
-		<decor>no</decor>
 		<focus>yes</focus>
 	</application>
 	<application title="nvlc">
-		<decor>no</decor>
 		<desktop>3</desktop>
 		<maximized>yes</maximized>
 		<layer>below</layer>
@@ -1342,7 +1343,6 @@
 		</size>
 	</application>
 	<application name="mail.google.com__mail_u*">
-		<decor>no</decor>
 		<focus>yes</focus>
 		<maximized>yes</maximized>
 	</application>
@@ -1350,54 +1350,44 @@
 		<size>
 			<height>100%</height>
 		</size>
-		<decor>no</decor>
 		<focus>yes</focus>
 	</application>
 	<application name="github.com">
 		<size>
 			<height>100%</height>
 		</size>
-		<decor>no</decor>
 		<focus>yes</focus>
 	</application>
 	<application name="bitbucket.org__dashboard_overview">
 		<size>
 			<height>100%</height>
 		</size>
-		<decor>no</decor>
 		<focus>yes</focus>
 	</application>
 	<application name="stackexchange.com__filters">
 		<size>
 			<height>100%</height>
 		</size>
-		<decor>no</decor>
 		<focus>yes</focus>
 	</application>
 	<application groupclass="Gvim">
-		<decor>no</decor>
 		<focus>yes</focus>
 	</application>
 	<application groupclass="Emacs">
-		<decor>no</decor>
 		<focus>yes</focus>
 	</application>
 	<application name="soundcloud.com__stream">
 		<maximized>yes</maximized>
-		<decor>no</decor>
 		<focus>yes</focus>
 		<display>3</display>
 	</application>
 	<application class="XTerm">
-		<decor>no</decor>
 		<focus>yes</focus>
 	</application>
 	<application class="Terminator">
-		<decor>no</decor>
 		<focus>yes</focus>
 	</application>
 	<application class="Workrave">
-		<decor>no</decor>
 		<focus>no</focus>
 		<layer>above</layer>
 		<desktop>all</desktop>
