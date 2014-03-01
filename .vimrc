@@ -152,5 +152,11 @@ let g:BASH_AuthorName   = $LOGNAME
 let g:BASH_Email        = $USERMAIL
 
 " http://stackoverflow.com/questions/657447/vim-clear-last-search-highlighting
-nnoremap <esc> :noh<return><esc>
+nnoremap <silent> <esc> :noh<return><esc>
+
+" https://github.com/fholgado/minibufexpl.vim
+nnoremap <C-Tab> :MBEbf<CR>
+nnoremap <C-S-Tab> :MBEbb<CR>
+
+set iskeyword+=.
 

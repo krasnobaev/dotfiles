@@ -52,6 +52,7 @@ text/x-markdown=gvim.desktop;rstudio.desktop;chromium-browser.desktop;bless.desk
 text/x-matlab=gvim;
 text/x-svsrc=sonic-visualiser.desktop;gvim;chromium-browser.desktop;libreoffice-writer.desktop;gvim;abiword.desktop;wine-extension-txt.desktop;emacs23.desktop;
 text/x-tex=gvim;
+video/3gpp=totem.desktop;gvim.desktop;vlc.desktop;banshee.desktop;
 video/mpeg=miro.desktop;kde4-kaffeine.desktop;vlc.desktop;totem.desktop;banshee.desktop;gvim;file-roller.desktop;
 x-scheme-handler/ftp=chromium-browser.desktop;
 x-scheme-handler/https=chromium-browser.desktop;

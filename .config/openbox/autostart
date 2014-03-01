@@ -11,7 +11,7 @@ xset s off
 xset -dpms
 xset s noblank
 
-setlayout 0 3 2 0
+setlayout 0 3 3 0
 
 # tiling manager
 pytyle2&

@@ -111,7 +111,7 @@
 			are not already set by other applications, or saved
 			in your session use obconf if you want to change these
 			without having to log out and back in-->
-	<number>6</number>
+	<number>9</number>
 	<firstdesk>1</firstdesk>
 	<names>
 		<name>Management</name>
@@ -120,6 +120,9 @@
 		<name>Complementary</name>
 		<name>Alphabetic</name>
 		<name>OrgMode</name>
+		<name>Manning</name>
+		<name>Dominich</name>
+		<name>Watson</name>
 	</names>
 	<popupTime>400</popupTime>
 </desktops>
@@ -190,6 +193,30 @@
 	</keybind>
 	<keybind key="C-A-Down">
 		<action name="GoToDesktop">
+			<to>down</to>
+			<wrap>yes</wrap>
+		</action>
+	</keybind>
+	<keybind key="C-S-A-Left">
+		<action name="SendToDesktop">
+			<to>left</to>
+			<wrap>yes</wrap>
+		</action>
+	</keybind>
+	<keybind key="C-S-A-Right">
+		<action name="SendToDesktop">
+			<to>right</to>
+			<wrap>yes</wrap>
+		</action>
+	</keybind>
+	<keybind key="C-S-A-Up">
+		<action name="SendToDesktop">
+			<to>up</to>
+			<wrap>yes</wrap>
+		</action>
+	</keybind>
+	<keybind key="C-S-A-Down">
+		<action name="SendToDesktop">
 			<to>down</to>
 			<wrap>yes</wrap>
 		</action>
@@ -401,6 +428,96 @@
 			<else>
 				<action name="SendToDesktop">
 					<to>6</to>
+				</action>
+			</else>
+		</action>
+	</keybind>
+	<keybind key="W-F7">
+		<action name="If">
+			<activedesktop>7</activedesktop>
+			<then>
+				<action name="GoToDesktop">
+					<to>last</to>
+				</action>
+			</then>
+			<else>
+				<action name="GoToDesktop">
+					<to>7</to>
+				</action>
+			</else>
+		</action>
+	</keybind>
+	<keybind key="W-S-F7">
+		<action name="If">
+			<activedesktop>7</activedesktop>
+			<then>
+				<action name="SendToDesktop">
+					<to>last</to>
+				</action>
+			</then>
+			<else>
+				<action name="SendToDesktop">
+					<to>7</to>
+				</action>
+			</else>
+		</action>
+	</keybind>
+	<keybind key="W-F8">
+		<action name="If">
+			<activedesktop>8</activedesktop>
+			<then>
+				<action name="GoToDesktop">
+					<to>last</to>
+				</action>
+			</then>
+			<else>
+				<action name="GoToDesktop">
+					<to>8</to>
+				</action>
+			</else>
+		</action>
+	</keybind>
+	<keybind key="W-S-F8">
+		<action name="If">
+			<activedesktop>8</activedesktop>
+			<then>
+				<action name="SendToDesktop">
+					<to>last</to>
+				</action>
+			</then>
+			<else>
+				<action name="SendToDesktop">
+					<to>8</to>
+				</action>
+			</else>
+		</action>
+	</keybind>
+	<keybind key="W-F9">
+		<action name="If">
+			<activedesktop>9</activedesktop>
+			<then>
+				<action name="GoToDesktop">
+					<to>last</to>
+				</action>
+			</then>
+			<else>
+				<action name="GoToDesktop">
+					<to>9</to>
+				</action>
+			</else>
+		</action>
+	</keybind>
+	<keybind key="W-S-F9">
+		<action name="If">
+			<activedesktop>9</activedesktop>
+			<then>
+				<action name="SendToDesktop">
+					<to>last</to>
+				</action>
+			</then>
+			<else>
+				<action name="SendToDesktop">
+					<to>9</to>
 				</action>
 			</else>
 		</action>
@@ -758,6 +875,11 @@
 	</keybind>
 	<keybind key="W-d">
 		<action name="ToggleShowDesktop"/>
+	</keybind>
+	<keybind key="W-C-d">
+		<action name="Execute">
+			<execute>gnome-terminal --command='/home/sypwex/bin/dict' --title=dict --hide-menubar</execute>
+		</action>
 	</keybind>
 	<keybind key="W-A-d">
 		<action name="ToggleDecorations"/>

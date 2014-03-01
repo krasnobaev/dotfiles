@@ -118,12 +118,9 @@ alias reload="exec $SHELL -l"
 # Faster npm for europeans
 command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu"
 
-# http://stackoverflow.com/questions/424071/list-all-the-files-for-a-commit-in-git/424142#424142
-alias gitshow="git diff-tree --no-commit-id --name-only -r"
-
 alias chrome="chromium-browser"
 alias vpuml="/usr/local/bin/Visual_Paradigm_for_UML_CE_10.2/bin/Visual_Paradigm_for_UML&"
-alias wine-ni="WINEPREFIX='$HOME/.wine-ni' wine "
+alias wine-ni="WINEPREFIX='$HOME/.wine-ni' wine64 "
 alias xmind="/usr/local/xmind/XMind&"
 alias yacc="exec '/usr/local/bin/bison' -y"
 alias zotero="/usr/local/bin/Zotero_linux-x86_64/zotero&"

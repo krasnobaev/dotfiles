@@ -90,7 +90,7 @@
 [push]
 	default = matching
 [user]
-	name = sypwex
-	email = sypwex@gmail.com
+	name = krasnobaev
+	email = alekseykrasnobaev@gmail.com
 [credential]
 	helper = cache
