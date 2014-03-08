@@ -123,5 +123,4 @@ alias vpuml="/usr/local/bin/Visual_Paradigm_for_UML_CE_10.2/bin/Visual_Paradigm_
 alias wine-ni="WINEPREFIX='$HOME/.wine-ni' wine64 "
 alias xmind="/usr/local/xmind/XMind&"
 alias yacc="exec '/usr/local/bin/bison' -y"
-alias zotero="/usr/local/bin/Zotero_linux-x86_64/zotero&"
 
