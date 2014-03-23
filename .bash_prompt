@@ -52,7 +52,7 @@ function parse_git_branch() {
 }
 
 export PS2="\[${BOLD}${MAGENTA}\]\u\[$WHITE\]@\[$ORANGE\]\h \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\$ \[$RESET\]"
-export PS3="\e[32;1m[\!]\[${BOLD}${MAGENTA}\]\u\[$WHITE\]@\[$ORANGE\]\h \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\$ \[$RESET\]\n"
+export PS3="\e[32;1m[\!]\$([ \j -gt 0 ] && echo '(\j)' )\[${BOLD}${MAGENTA}\]\u\[$WHITE\]@\[$ORANGE\]\h \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\$ \[$RESET\]\n"
 export PS4="\[$ORANGE\]→ \[$RESET\]"
 export PS1=$PS3
 
