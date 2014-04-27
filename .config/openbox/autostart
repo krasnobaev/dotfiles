@@ -21,3 +21,8 @@ workrave&
 
 # lal clock
 lal &
+
+ipython notebook --no-browser --notebook-dir=/home/sypwex/src/python/notebooks 2> /dev/null &
+
+# ALSA/JACK control panel
+cadence&
