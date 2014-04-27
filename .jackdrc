@@ -1,0 +1,1 @@
+/usr/bin/jackd -r -dalsa -dhw:CA0106 -r48000 -p512 -n3 -P -o2
