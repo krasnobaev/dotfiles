@@ -1,3 +1,4 @@
+#!/bin/bash
 # Programs that will run after Openbox has started
 
 ~/.bash_profile
@@ -16,13 +17,32 @@ setlayout 0 3 3 0
 # tiling manager
 pytyle2&
 
-# RSI Break
-workrave&
+if [ -z "$(pgrep workrave)" ]; then
+	workrave&
+fi
 
 # lal clock
 lal &
 
-ipython notebook --no-browser --notebook-dir=/home/sypwex/src/python/notebooks 2> /dev/null &
+if [ -z "$(pgrep python)" ]; then
+	ipython3 notebook --no-browser --notebook-dir=/home/sypwex/src/python/notebooks 2> /dev/null&
+fi
 
 # ALSA/JACK control panel
-cadence&
+if [ -z "$(pgrep jackd)" ]; then
+	cadence&
+fi
+
+# printer manager
+if [ -z "$(pgrep system-config-printer-applet)" ]; then
+	system-config-printer-applet&
+fi
+
+# dash
+synapse&
+
+# network manager
+if [ -z "$(nm-applet)" ]; then
+	nm-applet&
+fi
+
