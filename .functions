@@ -68,14 +68,6 @@ function fs() {
 	fi
 }
 
-# Use Git’s colored diff when available
-hash git &>/dev/null
-if [ $? -eq 0 ]; then
-	function diff() {
-		git diff --no-index --color-words "$@"
-	}
-fi
-
 # Create a data URL from a file
 function dataurl() {
 	local mimeType=$(file -b --mime-type "$1")
@@ -271,5 +263,21 @@ function osel() {
 
 function open() {
 	xdg-open "$@"
+}
+
+function sagi() {
+	sudo apt-get install "$@"
+}
+
+function acse() {
+	apt-cache search "$@"
+}
+
+function acsh() {
+	apt-cache show "$@"
+}
+
+function acshp() {
+	apt-cache showpkg "$@"
 }
 
