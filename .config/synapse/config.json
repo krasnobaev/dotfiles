@@ -1,7 +1,7 @@
 {
   "ui" : {
     "shortcuts" : {
-      "activate" : "<Super>space",
+      "activate" : "<Super>F2",
       "execute" : "Return",
       "execute-without-hide" : "<Shift>Return",
       "delete-char" : "BackSpace",
@@ -20,6 +20,13 @@
       "paste" : "<Control>v",
       "alt-paste" : "<Shift>Insert",
       "exit" : "<Control>q"
+    }
+  },
+  "data-sink" : {
+    "global" : {
+      "disabled-plugins" : [
+        "SynapseImgUrPlugin"
+      ]
     }
   }
 }
