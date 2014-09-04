@@ -337,6 +337,33 @@ augroup vimrc_maps
     map <down> <nop>
     map <left> <nop>
     map <right> <nop>
+    imap <up> <nop>
+    imap <down> <nop>
+    imap <left> <nop>
+    imap <right> <nop>
+augroup END
+
+augroup vimrcAutoComp
+	" http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
+	set completeopt=longest,menuone
+	inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
+	inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
+	inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
+	inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
+	inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
+	inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
+	inoremap <expr> <C-d>      pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<C-d>"
+	inoremap <expr> <C-u>      pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<C-u>"
+	if has("gui_running")
+		" C-Space seems to work under gVim on both Linux and win32
+	inoremap <C-Space> <C-n>
+	else " no gui
+		if has("unix")
+			inoremap <Nul> <C-n>
+		else
+			" I have no idea of the name of Ctrl-Space elsewhere
+		endif
+	endif
 augroup END
 
 " run it sometimes
