@@ -61,14 +61,6 @@ alias rot13='tr a-zA-Z n-za-mN-ZA-M'
 # Also, clear Apple’s System Logs to improve shell startup speed
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
 
-# Show/hide hidden files in Finder
-# alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
-# alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
-
-# Hide/show all desktop icons (useful when presenting)
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
-
 # URL-encode strings
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
 
@@ -101,39 +93,28 @@ done
 # Make Grunt print stack traces by default
 command -v grunt > /dev/null && alias grunt="grunt --stack"
 
-# Stuff I never really use but cannot delete either because of http://xkcd.com/530/
-alias stfu="osascript -e 'set volume output muted true'"
-alias pumpitup="osascript -e 'set volume 7'"
-alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
-
 # Kill all the tabs in Chrome to free up memory
 # [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
 alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
 
-# Lock the screen (when going AFK)
-alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 
-# Faster npm for europeans
-command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu"
-
-alias chrome="chromium-browser"
-alias vpuml="/usr/local/bin/Visual_Paradigm_for_UML_CE_10.2/bin/Visual_Paradigm_for_UML&"
-alias wine-ni="WINEPREFIX='$HOME/.wine-ni' wine64 "
-alias wine-ni32="WINEPREFIX='$HOME/.wine-ni32' wine "
-alias xmind="/usr/local/xmind/XMind&"
-alias yacc="exec '/usr/local/bin/bison' -y"
+#alias vpuml="/usr/local/bin/Visual_Paradigm_for_UML_CE_10.2/bin/Visual_Paradigm_for_UML&"
+#alias xmind="/usr/local/xmind/XMind&"
+#alias yacc="exec '/usr/local/bin/bison' -y"
 
 alias df='df -H'
 alias free='free -h'
-alias silent='> /dev/null 2>&1 &'
 
 alias update='sudo apt-get update; sudo apt-get upgrade && sudo apt-get autoremove && sudo apt-get autoclean'
 alias dist-upgrade='sudo apt-get dist-upgrade'
 
-alias ls1='ls -1'
-alias ls2='command ls -l'
+alias ls1='/bin/ls'
 alias ncal='ncal -wM3'
 alias cal='cal -M3'
+alias docker='sudo docker'
+
+alias shutdown='sudo shutdown -h now'
+alias reboot='sudo reboot'
+
