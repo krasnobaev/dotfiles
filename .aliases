@@ -24,16 +24,23 @@ alias week='date +%V'
 # Stopwatch
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
-# IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en1"
-alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
-
+# network aliases
 alias whois="whois -h whois-servers.net"
+alias ping='ping -c 4'
+alias ports='netstat -tulanp'
 
 # View HTTP traffic
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+# get web server headers #
+alias header='curl -I'
+# find out if remote server supports gzip / mod_deflate or not #
+alias headegz='curl -I --compress'
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en1"
+alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
 
 # Canonical hex dump; some systems have this symlinked
 command -v hd > /dev/null || alias hd="hexdump -C"
@@ -83,6 +90,16 @@ alias df='df -H'
 alias free='free -h'
 alias ncal='ncal -wM3'
 alias cal='cal -M3'
+alias mount='mount | column -t'
+alias jobs='jobs -l'
+
+# sysinfo
+alias free='free -m -l -t'
+alias psmem='ps auxf | sort -nr -k 4'
+alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+alias pscpu='ps auxf | sort -nr -k 3'
+alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
+alias gpumem='grep -i --color memory /var/log/Xorg.0.log'
 
 # sudo aliases
 alias update='sudo apt-get update; sudo apt-get upgrade && sudo apt-get autoremove && sudo apt-get autoclean'
@@ -91,4 +108,6 @@ alias docker='sudo docker'
 alias docker-enter='sudo docker-enter'
 alias shutdown='sudo shutdown -h now'
 alias reboot='sudo reboot'
+
+alias gitnopager='git --no-pager'
 
