@@ -192,6 +192,7 @@ augroup vimrc_REFINEME
         filetype on
         " Treat .json files as .js
         autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+		autocmd BufNewFile,BufRead *Dockerfile setfiletype conf
     endif
 augroup END
 
@@ -236,6 +237,7 @@ augroup vimrc_bundles
     Bundle 'vim_faq'
     "  Bundle 'vimspell' ///obsolete
     Bundle 'vimwiki'
+    Bundle 'The-NERD-Commenter'
 
     " required!
     filetype plugin indent on
@@ -249,6 +251,7 @@ augroup vimrc_filetype
     let g:xml_syntax_folding=1
     au FileType xml setl foldmethod=syntax
     au FileType python setl ts=8 et sw=4 sts=4
+    au FileType conf setl ts=4 et sw=4 sts=4
 augroup END
 
 augroup vimrc_cpp
@@ -341,6 +344,9 @@ augroup vimrc_maps
     imap <down> <nop>
     imap <left> <nop>
     imap <right> <nop>
+
+	" toggle comments
+	map <C-\> <Plug>NERDCommenterToggle<CR>
 augroup END
 
 augroup vimrcAutoComp
