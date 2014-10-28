@@ -205,3 +205,7 @@ function lognshow() {
     $@ 2> >(tee ./run-error.log) > >(tee ./run.log)
 }
 
+# Usage: bupgz <archive-name> <list-of-files> ...
+function bupgz() {
+    tar -czf $1-`date +%Y%m%d-%H%M%S`.tgz ${*:2}
+}
