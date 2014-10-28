@@ -209,3 +209,8 @@ function lognshow() {
 function bupgz() {
     tar -czf $1-`date +%Y%m%d-%H%M%S`.tgz ${*:2}
 }
+
+function ca() {
+    chromium-browser --app="$@"
+}
+
