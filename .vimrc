@@ -238,6 +238,7 @@ augroup vimrc_bundles
     "  Bundle 'vimspell' ///obsolete
     Bundle 'vimwiki'
     Bundle 'The-NERD-Commenter'
+    Bundle 'cespare/vim-toml'
 
     " required!
     filetype plugin indent on
@@ -252,6 +253,8 @@ augroup vimrc_filetype
     au FileType xml setl foldmethod=syntax
     au FileType python setl ts=8 et sw=4 sts=4
     au FileType conf setl ts=4 et sw=4 sts=4
+    au FileType sh setl ts=4 et sw=4 sts=4
+    au FileType javascript setl ts=2 et sw=2 sts=2
 augroup END
 
 augroup vimrc_cpp
