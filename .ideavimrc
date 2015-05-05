@@ -56,12 +56,6 @@ set ssop-=options
 " change the mapleader from \ to ,
 let mapleader=","
 
-" http://www.vim.org/scripts/script.php?script_id=365
-" http://www.thegeekstuff.com/2009/02/make-vim-as-your-bash-ide-using-bash-support-plugin
-" bash-support
-let g:BASH_AuthorName   = $LOGNAME
-let g:BASH_Email        = $USERMAIL
-
 " Multiple vim configurations
 " http://stackoverflow.com/questions/1889602/multiple-vim-configurations
 function! CheckCustomConfiguration()
@@ -127,7 +121,7 @@ augroup vimrc_search
     " Highlight dynamically as pattern is typed
     set incsearch
     " http://stackoverflow.com/questions/657447/vim-clear-last-search-highlighting
-    nnoremap <silent> <Esc> :noh<CR><Esc>
+    nnoremap <silent> <C-y> :noh<CR><Esc>
 augroup END
 
 augroup vimrc_outlook
@@ -192,7 +186,6 @@ augroup vimrc_REFINEME
         filetype on
         " Treat .json files as .js
         autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-		autocmd BufNewFile,BufRead *Dockerfile setfiletype conf
     endif
 augroup END
 
@@ -237,8 +230,6 @@ augroup vimrc_bundles
     Bundle 'vim_faq'
     "  Bundle 'vimspell' ///obsolete
     Bundle 'vimwiki'
-    Bundle 'The-NERD-Commenter'
-    Bundle 'cespare/vim-toml'
 
     " required!
     filetype plugin indent on
@@ -252,43 +243,6 @@ augroup vimrc_filetype
     let g:xml_syntax_folding=1
     au FileType xml setl foldmethod=syntax
     au FileType python setl ts=8 et sw=4 sts=4
-    au FileType conf setl ts=4 et sw=4 sts=4
-    au FileType sh setl ts=4 et sw=4 sts=4
-    au FileType javascript setl ts=2 et sw=2 sts=2
-augroup END
-
-augroup vimrc_cpp
-    "  au BufNewFile,BufRead *.sty set filetype=texsty | set foldmethod=syntax
-    "  au BufNewFile,BufRead *.sty set filetype=tex | set foldmethod=syntax
-    au FileType c set lcs=tab:\ \ ,trail:· | set autoread
-    au FileType cpp set lcs=tab:\ \ ,trail:· | set autoread
-    let g:C_CreateMenusDelayed='yes'
-augroup END
-
-augroup vimrc_clangscrathremove
-    " Automatically remove the preview window after autocompletion
-    " http://stackoverflow.com/questions/3105307/how-do-you-automatically-remove-the-preview-window-after-autocompletion-in-vim
-    autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-    autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-augroup END
-
-augroup vimrc_cscope
-    if has('cscope')
-        set cscopetag cscopeverbose
-
-        if has('quickfix')
-            set cscopequickfix=s-,c-,d-,i-,t-,e-
-        endif
-
-        cnoreabbrev csa cs add
-        cnoreabbrev csf cs find
-        cnoreabbrev csk cs kill
-        cnoreabbrev csr cs reset
-        cnoreabbrev css cs show
-        cnoreabbrev csh cs help
-
-        command -nargs=0 Cscope cs add $VIMSRC/src/cscope.out $VIMSRC/src
-    endif
 augroup END
 
 augroup vimrc_plugins
@@ -307,14 +261,6 @@ augroup END
 
 augroup vimrc_maps
     map <silent> <Esc><Esc> :w<CR>
-    " https://github.com/fholgado/minibufexpl.vim
-    let g:miniBufExplCycleArround = 1
-    noremap <silent> <C-Tab> :bn<CR>
-    noremap <silent> <C-S-Tab> :bp<CR>
-    inoremap <silent> <C-Tab> <esc>:bn<CR>i
-    inoremap <silent> <C-S-Tab> <esc>:bp<CR>i
-
-    map <C-w><C-w> :Kwbd<CR>
 
     map <F2> :if exists("g:syntax_on") <Bar>
                 \   syntax off <Bar>
@@ -347,33 +293,5 @@ augroup vimrc_maps
     imap <down> <nop>
     imap <left> <nop>
     imap <right> <nop>
-
-	" toggle comments
-	map <C-\> <Plug>NERDCommenterToggle<CR>
 augroup END
 
-augroup vimrcAutoComp
-	" http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
-	set completeopt=longest,menuone
-	inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
-	inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
-	inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
-	inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
-	inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
-	inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
-	inoremap <expr> <C-d>      pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<C-d>"
-	inoremap <expr> <C-u>      pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<C-u>"
-	if has("gui_running")
-		" C-Space seems to work under gVim on both Linux and win32
-	inoremap <C-Space> <C-n>
-	else " no gui
-		if has("unix")
-			inoremap <Nul> <C-n>
-		else
-			" I have no idea of the name of Ctrl-Space elsewhere
-		endif
-	endif
-augroup END
-
-" run it sometimes
-" helptags ~/.vim/doc

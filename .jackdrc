@@ -1,1 +1,1 @@
-/usr/bin/jackd -dalsa -dhw:CA0106,0 -r48000 -p1024 -n2 -P
+/usr/bin/jackd -P89 -u -dalsa -dhw:CA0106 -r48000 -p1024 -n2 -s -S -D -Chw:C170

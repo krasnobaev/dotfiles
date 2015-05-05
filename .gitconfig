@@ -93,4 +93,4 @@
 	name = krasnobaev
 	email = alekseykrasnobaev@gmail.com
 [credential]
-	helper = cache
+	helper = cache --timeout=3600
