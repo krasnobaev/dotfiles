@@ -1,8 +1,12 @@
 #!/bin/bash
+
+# @todo check if setxkbmap exists
 source ~/.profile
+
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH"
 
+# @todo check if setxkbmap exists
 # http://lib.ru/unixhelp/fonty.txt
 setxkbmap -layout "us,ru(typewriter)" -option "grp:alt_shift_toggle,grp_led:scroll"
 
