@@ -34,6 +34,13 @@
 	# Remove branches that have already been merged with master
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
+    # http://zarino.co.uk/post/git-set-upstream
+    unstage = reset HEAD
+    undo-commit = reset --soft HEAD^
+    poh = push origin HEAD
+    pulloh = pull origin HEAD
+    set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
+
 [apply]
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
@@ -70,11 +77,13 @@
 	added = yellow
 	changed = green
 	untracked = cyan
+
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
 
 # URL shorthands
+# ?
 [url "git@github.com:"]
 	insteadOf = "gh:"
 	pushInsteadOf = "github:"
@@ -91,7 +100,7 @@
 [push]
 	default = matching
 [user]
-	name = krasnobaev
+	name = Aleksey Krasnobaev
 	email = alekseykrasnobaev@gmail.com
 [credential]
 	helper = cache --timeout=3600

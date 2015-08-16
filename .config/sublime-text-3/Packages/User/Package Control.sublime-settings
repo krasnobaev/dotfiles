@@ -1,0 +1,43 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"AutoFileName",
+		"DocBlockr",
+		"DoxyDoxygen",
+		"Emmet",
+		"FileDiffs",
+		"Gist",
+		"Git",
+		"GitGutter",
+		"JavaScript & NodeJS Snippets",
+		"Javascript Beautify",
+		"JavaScript Completions",
+		"JavaScript Patterns",
+		"JavaScript Refactor",
+		"JavaScript Snippets",
+		"JavaScriptNext - ES6 Syntax",
+		"jQuery",
+		"JSHint Gutter",
+		"Markdown Preview",
+		"MarkdownEditing",
+		"Minify",
+		"Package Control",
+		"Pretty JSON",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-jscs",
+		"SublimeLinter-jshint",
+		"Tag",
+		"Theme - Soda",
+		"GitGutter-Edge",
+		"Grunt",
+		"Schemr",
+		"Theme - Sodarized",
+		"Themr"
+	]
+}

@@ -1,6 +1,6 @@
 {
     "user": {
-        "debug": true,
+        "debug": false,
         "delay": 0.25,
         "error_color": "D02000",
         "gutter_theme": "Packages/SublimeLinter/gutter-themes/Default/Default.gutter-theme",
@@ -8,11 +8,16 @@
         "lint_mode": "background",
         "linters": {
             "jscs": {
-                "@disable": false,
+                "@disable": true,
                 "args": [
-                    "-c",
-                    "${home}/.jscsrc"
+                    "--config",
+                    "D:\\codestyle\\ui5.json"
                 ],
+                "excludes": []
+            },
+            "jshint": {
+                "@disable": true,
+                "args": [],
                 "excludes": []
             }
         },
@@ -20,9 +25,7 @@
         "no_column_highlights_line": false,
         "passive_warnings": false,
         "paths": {
-            "linux": [
-                "/usr/local/bin/"
-            ],
+            "linux": [],
             "osx": [],
             "windows": []
         },
@@ -31,7 +34,7 @@
             "osx": [],
             "windows": []
         },
-        "rc_search_limit": 3,
+        "rc_search_limit": null,
         "shell_timeout": 10,
         "show_errors_on_save": false,
         "show_marks_in_minimap": true,
@@ -39,7 +42,6 @@
             "html (django)": "html",
             "html (rails)": "html",
             "html 5": "html",
-            "javascript (babel)": "javascript",
             "php": "html",
             "python django": "python"
         },
