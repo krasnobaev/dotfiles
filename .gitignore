@@ -42,3 +42,6 @@ Package Control.user-ca-bundle
 
 # sublimelinter themes
 SublimeLinter/
+
+# it holds github toker
+Gist.sublime-settings
