@@ -71,9 +71,12 @@ static const char *dmenucmd[]       = { "dmenu_run", "-fn", font, "-nb",
                                         selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmd[]        = { "x-terminal-emulator", NULL };
 static const char *gvimcmd[]        = { "gvim", NULL };
+static const char *mailcmd[]         = { "chromium-browser",
+    "--app=https://mail.google.com/mail/u/0/#inbox", NULL };
 static const char *webcmd[]         = { "chromium-browser", NULL };
 static const char *webhcmd[]        = { "chromium-browser",
                                         "--incognito", NULL };
+static const char *webalthcmd[]     = { "firefox", NULL };
 static const char *explorercmd[]    = { "dolphin", NULL };
 static const char *printcmd[]       = { "gnome-screenshot", NULL};
 static const char *aprintcmd[]      = { "gnome-screenshot", "-w", NULL};
@@ -136,6 +139,8 @@ static Key keys[] = {
 //  { 0,                 XK_c,       spawn, {0} },
     { 0,                 0x1008ff18, spawn, {.v = webcmd}  },   //Web Key
     { ShiftMask,         0x1008ff18, spawn, {.v = webhcmd} },   //Web Key
+    { Mod1Mask,          0x1008ff18, spawn, {.v = webalthcmd} },//Web Key
+    { 0,                 0x1008ff19, spawn, {.v = mailcmd} },   //XF86Mail
     { MODKEY,            XK_e,       spawn, {.v = explorercmd} },
     { MODKEY,            0x1008ff5d, spawn, {.v = explorercmd} }, //XF86Explorer
     { 0,                 0x1008ff30, spawn, {.v = termcmd} },   //Favorites Key

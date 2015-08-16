@@ -117,3 +117,5 @@ alias pp3se='pip3 search'
 alias sppi='sudo pip install'
 alias spp3i='sudo pip3 install'
 
+alias historyall='cat ~/.bash_history_arj | grep'
+

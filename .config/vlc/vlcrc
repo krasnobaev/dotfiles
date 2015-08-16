@@ -3336,6 +3336,11 @@ equalizer-preamp=0.200001
 # X11 display (string)
 #x11-display=
 
+[vout_sdl] # Simple DirectMedia Layer video output
+
+# SDL chroma format (string)
+#sdl-chroma=
+
 [fb] # GNU/Linux framebuffer video output
 
 # Framebuffer device (string)

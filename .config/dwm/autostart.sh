@@ -33,3 +33,9 @@ wmname LG3D
 
 guake&
 
+skype&
+
+if [ -z "$(pgrep btsync)" ]; then
+    btsync-gui&
+fi
+
