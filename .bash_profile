@@ -24,6 +24,10 @@ shopt -s nocaseglob
 # Append to the Bash history file, rather than overwriting it
 shopt -s histappend
 
+# infinite command history in bash
+# http://superuser.com/a/479727
+export HISTSIZE=""
+
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell
 
