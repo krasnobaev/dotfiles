@@ -54,6 +54,7 @@
     whitespace = fix
 
 [core]
+# needs to be merged
     # Use custom `.gitignore` and `.gitattributes`
     excludesfile = ~/.gitignore
     attributesfile = ~/.gitattributes
@@ -66,7 +67,11 @@
     # Make `git rebase` safer on OS X
     # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
     trustctime = false
-    editor = subl -n -w
+# merged
+    # make sure `C:\Program Files\Sublime Text 3` is in PATH
+    editor = subl -w
+    eol = lf
+    autocrlf = true
 
 [color]
     # Use colors in Git commands that are capable of colored output when
