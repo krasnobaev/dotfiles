@@ -37,6 +37,10 @@
     # Remove branches that have already been merged with master
     dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
+    # list only versioned files
+    # http://stackoverflow.com/questions/1441317/how-to-list-versioned-files-in-git
+    ls = ls-tree --name-only HEAD
+
     # http://zarino.co.uk/post/git-set-upstream
     unstage = reset HEAD
     undo-commit = reset --soft HEAD^
