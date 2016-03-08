@@ -1,14 +1,17 @@
 #!/bin/bash
 
-# @todo check if setxkbmap exists
-source ~/.profile
-
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH"
 
-# @todo check if setxkbmap exists
+if [ -e "$HOME/.profile" ]; then
+    source ~/.profile;
+fi
+
+# this will need only on linux while running from tty
 # http://lib.ru/unixhelp/fonty.txt
-setxkbmap -layout "us,ru(typewriter)" -option "grp:alt_shift_toggle,grp_led:scroll"
+if [[ `uname` == 'Linux' ]]; then
+    setxkbmap -layout "us,ru(typewriter)" -option "grp:alt_shift_toggle,grp_led:scroll";
+fi
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -57,6 +60,8 @@ export LESSOPEN='|~/.lessfilter %s'
 
 # https://confluence.atlassian.com/display/BITBUCKET/Set+up+SSH+for+Git
 SSH_ENV=$HOME/.ssh/environment
+
+## do i need it on mac os x ?
 
 # start the ssh-agent
 function start_agent {
