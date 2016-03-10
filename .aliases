@@ -7,6 +7,8 @@ fi
 
 # ls aliases
 # Always use color output for ls
+# @todo - detect OS. mac os do not support --hide
+# alias ls="command ls -glh ${colorflag}"
 alias ls="command ls --hide=lost+found -Gglh ${colorflag}"
 alias lsh='echo "$(ls -l | grep "$(cat .hidden)" | wc -l) items hided" && ls -GgL | cut -d" " -f3- | grep -v "$(cat .hidden)"'
 alias l='/bin/ls'
