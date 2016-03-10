@@ -2,6 +2,7 @@
 // and are overridden in turn by file type specific settings.
 {
     "tab_size": 4,
+    "word_wrap": "true",
     "rulers": [80],
     "translate_tabs_to_spaces": true,
     "trim_trailing_white_space_on_save": true,
