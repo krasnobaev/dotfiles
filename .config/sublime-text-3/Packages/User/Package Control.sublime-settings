@@ -26,6 +26,7 @@
 		"Minify",
 		"Package Control",
 		"Pretty JSON",
+		"Sass",
 		"SideBarEnhancements",
 		"SublimeCodeIntel",
 		"SublimeLinter",
@@ -34,7 +35,6 @@
 		"Tag",
 		"Theme - Soda",
 		"GitGutter-Edge",
-		"Grunt",
 		"Schemr",
 		"Theme - Sodarized",
 		"Themr"
