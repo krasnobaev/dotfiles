@@ -60,26 +60,16 @@
     # http://www.codeography.com/2011/08/05/project-specific-git-author.html
     workprofile = !git config user.email "A.Krasnobaev@bdo.ru" && git config user.name "Aleksey Krasnobaev"
 
-[apply]
-    # Detect whitespace errors when applying a patch
-    whitespace = fix
-    # whitespace = nowarn
-    
-    # Treat spaces before tabs, lines that are indented with 8 or more spaces, and
-    # all kinds of trailing whitespace as an error.
-    # [default] trailing-space: looks for spaces at the end of a line
-    # [default] space-before-tab: looks for spaces before tabs at the beginning of
-    # a line
-    # whitespace = space-before-tab,indent-with-non-tab,trailing-space
-
 [core]
+    # do not detect whitespace errors
+    whitespace = nowarn
+
     # Make `git rebase` safer on OS X
     # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
     trustctime = false
 
     # make sure `C:\Program Files\Sublime Text 3` is in PATH
     editor = subl -w
-    eol = lf
     autocrlf = true
 
 [merge]
